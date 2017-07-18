@@ -75,7 +75,7 @@ class KDZFileTools(kdz.KDZFile):
 			elif type(kdz_item[key]) is int:
 				if kdz_item[key] != 0:
 					print('[!] Error: field "'+key+'" is non-zero ('+b2a_hex(kdz_item[key])+')', file=sys.stderr)
-					sys.exit(1)
+					#sys.exit(1)
 			else:
 				print("[!] Error: internal error", file=sys.stderr)
 				sys.exit(-1)
