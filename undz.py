@@ -78,6 +78,7 @@ class UNDZUtils(object):
 			elif type(dz_item[key]) is int:
 				if dz_item[key] != 0:
 					print('[!] Error: Value supposed to be zero in field "'+key+'" is non-zero ('+hex(dz_item[key])+')', file=sys.stderr)
+					# G6 KDZs have this as non-zero, it still works fine
 					#sys.exit(1)
 			else:
 				print("[!] Error: internal error", file=sys.stderr)
@@ -86,6 +87,7 @@ class UNDZUtils(object):
 		# To my knowledge this is supposed to be blank (for now...)
 		if len(dz_item['pad']) != 0:
 			print("[!] Error: pad is not empty", file=sys.stderr)
+			# G6 KDZs have this as non-zero, it still works fine
 			#sys.exit(1)
 
 
